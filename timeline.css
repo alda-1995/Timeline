@@ -1,0 +1,177 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+body {
+  background-color: #ffe75e; }
+
+.parent-aling {
+  width: 100%; }
+
+.grid-container {
+  width: 100%;
+  max-width: 85%; }
+
+.parent-time {
+  height: 100vh;
+  width: 100%;
+  padding: 12vh 0;
+  position: relative;
+  overflow: hidden; }
+  .parent-time .timeline {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .parent-time .timeline .time {
+      width: 33.333%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-negative: 0;
+      flex-shrink: 0; }
+      .parent-time .timeline .time.center {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+      .parent-time .timeline .time.end {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: end;
+        margin-bottom: 2rem; }
+      .parent-time .timeline .time .content-time {
+        width: 80%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .parent-time .timeline .time .content-time .circle-time {
+          height: 5vw;
+          width: 5vw;
+          color: #fff;
+          background-color: #b7472a;
+          border-radius: 50%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          font-family: "Lato";
+          font-weight: bold;
+          font-size: 12px;
+          margin-bottom: 1rem;
+          -webkit-transform-origin: center;
+          -ms-transform-origin: center;
+          transform-origin: center; }
+        .parent-time .timeline .time .content-time .textos {
+          overflow: hidden;
+          margin-bottom: 1rem; }
+          .parent-time .timeline .time .content-time .textos .descrip-time {
+            color: #fff;
+            font-family: "Lato";
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            -webkit-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+            transform: translateY(100%);
+            margin-bottom: 0; }
+      @media only screen and (max-width: 767px) {
+        .parent-time .timeline .time {
+          width: 100%; } }
+  .parent-time .dates-line {
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 0;
+    height: 12vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: hidden;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .parent-time .dates-line .bar-progress {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .parent-time .dates-line .bar-progress .container-bullet {
+        width: 60px;
+        z-index: 3; }
+        .parent-time .dates-line .bar-progress .container-bullet:last-child {
+          width: 30px; }
+        .parent-time .dates-line .bar-progress .container-bullet .bullet-date {
+          background-color: #c02739;
+          height: 14px;
+          width: 14px;
+          border-radius: 50%;
+          cursor: pointer;
+          -webkit-transform-origin: 50% 50%;
+          -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%; }
+      .parent-time .dates-line .bar-progress .line-percent {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: #fff;
+        z-index: 1; }
+      .parent-time .dates-line .bar-progress .line-load {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 0px;
+        height: 3px;
+        z-index: 2;
+        background-color: #c02739; }
+    @media only screen and (max-width: 767px) {
+      .parent-time .dates-line {
+        height: 5rem;
+        overflow: hidden;
+        width: 80%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%); } }
+  @media only screen and (max-width: 767px) {
+    .parent-time {
+      padding: 6rem 0;
+      height: calc(var(--vh, 1vh) * 100); } }
